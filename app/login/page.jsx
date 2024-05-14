@@ -1,6 +1,6 @@
 "use client";
-import { Navbar } from "@/components/LandingNav";
-import { signIn, useSession } from "next-auth/react";
+import { Navbar } from "@/component/landing/LandingNav";
+// import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -8,15 +8,15 @@ import { useState } from "react";
 import loginBg from "@/public/images/bgs/loginBg.png";
 
 // utils
-import FullButton from "@/components/ui/buttons/FullButton";
-import HollowButton from "@/components/ui/buttons/HollowButton";
-import TextInput from "@/components/ui/inputs/TextInput";
+import FullButton from "@/component/buttons/FullButton";
+import HollowButton from "@/component/buttons/HollowButton";
+import TextInput from "@/utils/inputs/TextInput";
 
 // modals
-import ModalForgotPassword from "@/components/ui/modals/ForgotPassword/ModalForgotPassword";
+import ModalForgotPassword from "@/component/modals/ForgotPassword/ModalForgotPassword";
 
 const Login = () => {
-	const { data: session, status } = useSession();
+	// const { data: session, status } = useSession();
 	const router = useRouter();
 
 	const [showInvalidCredentials, setShowInvalidCredentials] = useState(false);
@@ -28,11 +28,11 @@ const Login = () => {
 	const [showForgotPasswordModal, setShowForgotPasswordModal] =
 		useState(false);
 
-	if (session) {
-		router.push(`/${session.user.role}`);
-	}
+	// if (session) {
+	// 	router.push(`/${session.user.role}`);
+	// }
 
-	if (status === "loading" || session) return <div>Loading...</div>;
+	// if (status === "loading" || session) return <div>Loading...</div>;
 
 	const handleLogin = async (e) => {
 		e.preventDefault();
@@ -46,7 +46,7 @@ const Login = () => {
 
 			if (result.ok) {
 				console.log("Login successful:", result);
-				router.push(`/${session.user.role}`);
+				// router.push(`/${session.user.role}`);
 			} else {
 				console.error("Login error: inside", error.message);
 			}

@@ -1,12 +1,12 @@
 "use client";
-import Features from "@/components/Features";
-import Hero from "@/components/Hero";
-import { Navbar } from "@/components/LandingNav";
-import { Content } from "@/components/Steps";
-import BlogBlock from "@/components/ui/users/BlogBlock";
-import Questions from "@/components/ui/users/FAQs";
-import Footer from "@/components/ui/users/Footer";
-import LandingSlider from "@/components/ui/users/Slider";
+import Features from "@/component/landing/Features";
+import Hero from "@/component/landing/Hero";
+import { Navbar } from "@/component/landing/LandingNav";
+import { Content } from "@/component/landing/Steps";
+import BlogBlock from "@/component/landing/BlogBlock";
+import Questions from "@/component/FAQs";
+import Footer from "@/component/Footer";
+import LandingSlider from "@/component/landing/Slider";
 
 export default function Landing() {
 	const faqList = [

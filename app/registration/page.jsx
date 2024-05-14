@@ -5,17 +5,18 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 // utils
-import { Navbar } from "@/components/LandingNav";
-import FullButton from "@/components/ui/buttons/FullButton";
-import InputCollege from "@/components/ui/inputs/InputCollege";
-import InputCollegeInformation from "@/components/ui/inputs/InputCollegeInformation";
-import InputInstitutionalInfo from "@/components/ui/inputs/InputInstitutionalInfo";
-import InputName from "@/components/ui/inputs/InputName";
-import InputPassword from "@/components/ui/inputs/InputPassword";
-import PersonalInfo from "@/components/ui/inputs/InputPersonalInfo";
-import InputRole from "@/components/ui/inputs/InputRole";
-import ModalRegistrationSuccessful from "@/components/ui/modals/ModalRegistrationSuccessful";
-import ModalTermsUnchecked from "@/components/ui/modals/ModalTermsUnchecked";
+import { Navbar } from "@/component/landing/LandingNav";
+import FullButton from "@/component/buttons/FullButton";
+import InputCollege from "@/utils/inputs/InputCollege";
+import InputCollegeInformation from "@/utils/inputs/InputCollegeInformation";
+import InputInstitutionalInfo from "@/utils/inputs/InputInstitutionalInfo";
+import InputName from "@/utils/inputs/InputName";
+import InputPassword from "@/utils/inputs/InputPassword";
+import InputPersonalInfo from "@/utils/inputs/InputPersonalInfo";
+import InputRole from "@/utils/inputs/InputRole";
+import ModalRegistrationSuccessful from "@/component/modals/ModalRegistrationSuccessful";
+import ModalTermsUnchecked from "@/component/modals/ModalTermsUnchecked";
+import TextInput from "@/utils/inputs/TextInput";
 
 const Registration = () => {
 	const router = useRouter();
